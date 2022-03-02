@@ -98,9 +98,9 @@ char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
     string coss;
-cout<<"tiep chu mai fen? y:tiep;n or other: khong";
+cout<<"tiep chu mai fen? y/Y:tiep;n or other: khong";
 cin>>coss;
-if(coss=="y")isContinued='y';
+if(coss=="y"||coss=="Y")isContinued='y';
 else isContinued='n';
     return isContinued;
 }
