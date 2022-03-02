@@ -83,7 +83,7 @@ bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
 if(isContinued=='y')result=true;
-
+if(isContinued=='Y')result=true;
     return result;
 }
 
@@ -100,7 +100,8 @@ char getPlayerOpinion() {
     string coss;
 cout<<"tiep chu mai fen? y/Y:tiep;n or other: khong";
 cin>>coss;
-if(coss=="y"||coss=="Y")isContinued='y';
+if(coss=="y")isContinued='y';
+else if(coss=="Y")isContinued='Y';
 else isContinued='n';
     return isContinued;
 }
