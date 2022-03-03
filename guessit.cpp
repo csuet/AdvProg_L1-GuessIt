@@ -30,7 +30,7 @@ int getPlayerGuess() {
 
     //return 1;
     int playerGuess;
-   // cout << "Your guess is: ";
+    cout << "Your guess is: ";
     cin >> playerGuess;
     return playerGuess;
 }
@@ -53,7 +53,7 @@ string getAnswer(int number, int randomNumber) {
    // string answer;
 
    // return answer;
-    if (number == randomNumber)return "Congratulation!You win.";
+    if (number == randomNumber)return "Congratulation! You win.";
     else if (number < randomNumber)return "Your number is lower.";
     else return "Your number is higher.";
 }
@@ -67,7 +67,7 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    if (answer == "Congratulation!You win.")return true;
+    if (answer == "Congratulation! You win.")return true;
 
     return false;
 }
