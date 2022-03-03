@@ -28,9 +28,8 @@ int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
     int guess;
     cout << endl << "Enter your guess (1..100): ";
-    
     cin >> guess;
-    return guess; 
+    return guess;
 }
 
 
@@ -111,12 +110,12 @@ void playGuessIt() {
     } while (!checkSuccess(answer));
 }
 
-int main() {
+int run() {
     srand(time(0));
     char isContinued;
     do {
         playGuessIt();
         isContinued = getPlayerOpinion();
     } while (checkContinuePlaying(isContinued));
-    return 0;
+    return 0; 
 }
