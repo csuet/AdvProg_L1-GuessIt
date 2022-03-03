@@ -28,7 +28,6 @@ int generateRandomNumber() {
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
     int number;
-    cout << endl << "Enter your number between 1 and 100: ";
     cin >> number;
     return number;
 }
