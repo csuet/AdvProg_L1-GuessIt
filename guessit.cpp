@@ -13,8 +13,11 @@ using namespace std;
         number (int) : random number in range 1-100
 ***/
 int generateRandomNumber() {
+
     // TODO: Return the random number in range 1 to 100
-    return 100;
+    
+    int n = rand()% 100 + 1;
+    return n;
 }
 
 
@@ -25,9 +28,9 @@ int generateRandomNumber() {
         number (int) : the number that player guessed
 ***/
 int getPlayerGuess() {
-    // TODO: Ask the player guest and return the player's number
-
-    return 1;
+    int guessNumber;
+    cin>>guessNumber;
+    return guessNumber;
 }
 
 
@@ -40,13 +43,15 @@ int getPlayerGuess() {
 ***/
 string getAnswer(int number, int randomNumber) {
     /*** 
-        TODO: check number with randomNumber and return the result.
+        // TO do: check number with randomNumber and return the result.
               If number is higher than randomNumber, the answer is "Your number is higher."
               If number is lower than randomNumber, the answer is "Your number is lower."
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-
+    if(number > randomNumber) answer = "Your number is higher.";
+    if(number < randomNumber) answer = "Your number is lower." ;
+    if(number = randomNumber) answer = "Congratulation! You win.";
     return answer;
 }
 
@@ -59,7 +64,7 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    
+    if(answer != "Congratulation! You win.") return false;
     return true;
 }
 
@@ -73,6 +78,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
+    if(isContinued == 'Y' || isContinued == 'y') result = true;
 
     return result;
 }
@@ -86,8 +92,9 @@ bool checkContinuePlaying(char isContinued) {
 ***/
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
+    std::cout<<"Press 'y' or 'Y' to continue to play game"<<std::endl;
     char isContinued;
-
+    std::cin>>isContinued;
     return isContinued;
 }
 
