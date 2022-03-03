@@ -8,8 +8,8 @@ using namespace std;
 
 
 int generateRandomNumber() {
-
-    return rand() % 100 + 1;
+    int randomNumber = rand() % 100 + 1;
+    return randomNumber;
 }
 
 
@@ -64,7 +64,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if(isContinued == 'y')
+    if(isContinued == 'y' || isContinued == 'Y')
     {
         result = true;
     }
