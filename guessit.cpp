@@ -95,20 +95,20 @@ bool checkContinuePlaying(char isContinued) {
 ***/
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
-    int count_bad=0;
+    //int count_bad=0;
     char isContinued;
     cout<<"Do you want to cotinue play:"<<endl;
     cout<<"Yes(fill y) or No(fill n)"<<endl;
 
     do{
-        if(count_bad>2){
+        /*if(count_bad>2){
             cout<<"Please chose 'y' or 'n'"<<endl;
-        }
+        }*/
         cout<<"Your choice is :";
         cin>>isContinued;
         count_bad++;
     }while(isContinued!='y'&&isContinued!='n');
-    count_bad=0;
+    //count_bad=0;
     return isContinued;
 }
 
