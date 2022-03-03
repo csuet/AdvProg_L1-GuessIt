@@ -84,8 +84,8 @@ bool checkContinuePlaying(char isContinued) {
     /*bool result = false;
 
     return result;*/
-    if (isContinued == '1')return true;
-    return false;
+    if (isContinued == '0')return false;
+    return true;
 }
 
 
