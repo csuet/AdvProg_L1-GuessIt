@@ -82,7 +82,7 @@ bool checkContinuePlaying(char isContinued) {
     bool result = false;
     if(isContinued=='y'){
         result=true;
-    }else result=false;
+    }
     return result;
 }
 
@@ -125,7 +125,7 @@ void playGuessIt() {
     } while (!checkSuccess(answer));
 }
 
-int run() {//run
+int main() {//run
     srand(time(0));
     char isContinued;
     do {
