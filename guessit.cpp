@@ -91,13 +91,9 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if(isContinued == '1')
+    if(isContinued == 'Y')
     {
         result = true;
-    }
-    else if(isContinued == '0')
-    {
-        result = false;
     }
     return result;
 }
@@ -113,10 +109,6 @@ char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
     cin >> isContinued;
-    while(isContinued != '1' && isContinued != '0')
-    {
-        cin >> isContinued;
-    }
     return isContinued;
 }
 
