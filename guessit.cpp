@@ -1,17 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "guessit.h"
 
 using namespace std;
-
-int generateRandomNumber();
-int getPlayerGuess();
-string getAnswer(int number, int randomNumber);
-bool checkSuccess(string answer);
-bool checkContinuePlaying(char isContinued);
-char getPlayerOpinion();
-void playGuessIt();
-int run();
 
 int main(){
     run();
@@ -95,11 +87,12 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
+    bool result = false;
     if (isContinued == 'Y'){
         return true;
     }
 
-    return false;
+    return result;
 }
 
 
