@@ -30,7 +30,7 @@ int getPlayerGuess() {
 
     //return 1;
     int playerGuess;
-    cout << "Your guess is: ";
+   // cout << "Your guess is: ";
     cin >> playerGuess;
     return playerGuess;
 }
@@ -84,7 +84,7 @@ bool checkContinuePlaying(char isContinued) {
     /*bool result = false;
 
     return result;*/
-    if (isContinued == '1')return true;
+    if (isContinued == 'y')return true;
     return false;
 }
 
@@ -98,7 +98,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     // char isContinued;
-    cout << "Do you want to play continue?\n\t\t(1) - Yes\t\t(2) - No\n";
+    cout << "Do you want to play continue?\n(1) - y\t\t(2) - n\n";
     char opinion;
     cin >> opinion;
     return opinion;
