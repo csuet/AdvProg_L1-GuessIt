@@ -18,14 +18,17 @@ int getPlayerGuess() {
 }
 
 
-
+string getAnswer(int number, int randomNumber) {
     string answer = "";
-    if (number > randomNumber)
+    if (number > randomNumber){
         answer = "Your number is higher.";
-    else if (number < randomNumber)
+    }
+    else if (number < randomNumber){
         answer = "Your number is lower.";
-    else
+    }
+    else{
         answer = "Congratulation! You win.";
+    }
     return answer;
 }
 
