@@ -95,15 +95,15 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying( char isContinued) {
     // TODO: return result after checking player continue playing or not
-    bool result = true;
-    if( isContinued == '0')
+    bool result = false;
+    if( isContinued == 'Y' || isContinued == 'y')
     {
         result = true;
     }
-    /*else 
+    else 
     {
         result = false;
-    }*/
+    }
 
     return result;
 }
