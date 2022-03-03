@@ -28,7 +28,6 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-    cout << "Enter your number: ";
     int number;
     cin >> number;
     return number;
@@ -107,7 +106,6 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cout << "Do you want to play again? Press 'y' if you want, 'n' if not." << endl;
     cin >> isContinued;
     return isContinued;
 }
@@ -129,7 +127,6 @@ int run() {
     srand(time(0));
     char isContinued;
     do {
-        system("cls");
         playGuessIt();
         isContinued = getPlayerOpinion();
     } while (checkContinuePlaying(isContinued));
