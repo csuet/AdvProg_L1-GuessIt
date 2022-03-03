@@ -100,6 +100,10 @@ bool checkContinuePlaying(char isContinued) {
     {
         result = true;
     }
+    else 
+    {
+        result = false;
+    }
 
     return result;
 }
