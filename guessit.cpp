@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "guessit.h"
+#include <cctype>
 
 using namespace std;
 
