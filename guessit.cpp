@@ -48,8 +48,8 @@ string getAnswer(int number, int randomNumber) {
     ***/
     string answer;
     if(number==randomNumber)answer = "Congratulation! You win.";
-    if(number<randomNumber)answer = "Your number is lower.";
-    if(number>randomNumber)answer = "Your number is higher.";
+    else if(number<randomNumber)answer = "Your number is lower.";
+    else if(number>randomNumber)answer = "Your number is higher.";
     return answer;
 }
 
