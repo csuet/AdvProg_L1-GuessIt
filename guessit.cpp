@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <cctype>
 #include "guessit.h"
 
 using namespace std;
@@ -72,7 +73,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if (isContinued=='y') result=true;
+    if (tolower(isContinued)=='y') result=true;
     return result;
 }
 
