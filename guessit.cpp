@@ -6,24 +6,14 @@
 using namespace std;
 
 
-/***
-    Args:
 
-    Returns:
-        number (int) : random number in range 1-100
-***/
 int generateRandomNumber() {
 
     return rand() % 100 + 1;
 }
 
 
-/***
-    Args:
 
-    Returns:
-        number (int) : the number that player guessed
-***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
     int guess;
@@ -32,13 +22,7 @@ int getPlayerGuess() {
 }
 
 
-/***
-    Args:
-        number (int): answer number from player
-        randomNumber (int): the true number
-    Returns:
-        answer (string) : answer of computer after checking result
-***/
+
 string getAnswer(int number, int randomNumber) {
     /***
         TODO: check number with randomNumber and return the result.
@@ -63,12 +47,6 @@ string getAnswer(int number, int randomNumber) {
 }
 
 
-/***
-    Args:
-        answer (string): answer from computer after compare numbers
-    Returns:
-        result (bool) : player win or not
-***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
     if(answer == "Your number is higher." || answer == "Your number is lower." )
@@ -82,12 +60,7 @@ bool checkSuccess(string answer) {
 }
 
 
-/***
-    Args:
-        isContinued (char): player's choice
-    Returns:
-        result (bool) : continue playing or not
-***/
+
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
@@ -99,12 +72,7 @@ bool checkContinuePlaying(char isContinued) {
 }
 
 
-/***
-    Args:
 
-    Returns:
-        isContinues (char) : player's choice (continue playing or not)
-***/
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
