@@ -106,7 +106,7 @@ char getPlayerOpinion() {
         }*/
         cout<<"Your choice is :";
         cin>>isContinued;
-        count_bad++;
+        //count_bad++;
     }while(isContinued!='y'&&isContinued!='n');
     //count_bad=0;
     return isContinued;
