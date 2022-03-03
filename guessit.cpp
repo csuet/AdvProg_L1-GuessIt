@@ -2,10 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "guessit.h"
-
 using namespace std;
-
-
 /***
     Args:
         
@@ -14,10 +11,9 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    return 100;
+    int randomNumber =  rand() % 100 + 1;
+    return randomNumber;
 }
-
-
 /***
     Args:
         
@@ -26,11 +22,9 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-
-    return 1;
+    int guessGuess;cin>>guessGuess;
+    return guessGuess;
 }
-
-
 /***
     Args:
         number (int): answer number from player
@@ -46,11 +40,16 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-
+    if(number > randomNumber){
+    	answer = "Your number is higher.";
+	}
+	if(number < randomNumber){
+		answer = "Your number is lower.";
+	}if(number == randomNumber){
+		answer = "Congratulation! You win.";
+	}
     return answer;
 }
-
-
 /***
     Args:
         answer (string): answer from computer after compare numbers
@@ -59,11 +58,11 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    
-    return true;
+    if(answer == "Congratulation! You win."){
+    	return true;
+	}
+	return false;
 }
-
-
 /***
     Args:
         isContinued (char): player's choice
@@ -73,11 +72,11 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-
+    if(isContinued == 'y' || isContinued == 'Y'){
+    	result = true;
+	}
     return result;
 }
-
-
 /***
     Args:
         
@@ -87,11 +86,9 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-
+    cin>>isContinued;
     return isContinued;
 }
-
-
 void playGuessIt() {
     int randomNumber = generateRandomNumber();
     int number;
