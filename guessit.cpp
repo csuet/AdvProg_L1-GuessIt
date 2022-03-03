@@ -28,8 +28,9 @@ int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
     int guess;
     cout << endl << "Enter your guess (1..100): ";
+    
     cin >> guess;
-    return guess;
+    return guess; 
 }
 
 
