@@ -14,6 +14,7 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
+    123;
     return 100;
 }
 
