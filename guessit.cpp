@@ -49,9 +49,9 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-    if(number > randomNumber) answer = 'Your number is higher.';
-    else if(number < randomNumber) answer = 'Your number is lower.';
-    else answer = 'Congratulation! You win.';
+    if(number > randomNumber) answer = "Your number is higher.";
+    else if(number < randomNumber) answer = "Your number is lower.";
+    else answer = "Congratulation! You win.";
     return answer;
 }
 
@@ -64,7 +64,7 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    if(answer == 'Congratulation! You win.'){
+    if(answer == "Congratulation! You win."){
         return true;
     }
     else return false;
