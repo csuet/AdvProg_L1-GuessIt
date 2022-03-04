@@ -79,10 +79,9 @@ bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
     if (isContinued == 'y') result = true;
-    else result = false;
     return result;
 }
-
+git add guessit.cpp && git commit -m "21020757_Nguyễn Đăng Dương" && git push origin main
 
 /***
     Args:
