@@ -14,7 +14,6 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    srand(time(0));
     return rand() % 100 + 1;
     //return 100;
 }
@@ -79,10 +78,9 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
-    //bool result = false;
-    if(isContinued == 'y') return true;
-    else return false;
-    //return result;
+    bool result = false;
+    if(isContinued == 'y' || isContinued == 'Y') result = true;
+    return result;
 }
 
 
@@ -95,7 +93,10 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cin >> isContinued;
+    string s;
+    if(s == "y") isContinued = 'y';
+    else if(s == "Y") isContinued = 'Y';
+    else isContinued = 'n';
     return isContinued;
 }
 
