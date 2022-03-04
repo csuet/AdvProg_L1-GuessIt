@@ -26,7 +26,6 @@ int generateRandomNumber() {
         number (int) : the number that player guessed
 ***/
 int getPlayerGuess() {
-    // TODO: Ask the player guest and return the player's number
     int guess;
     cin >> guess;
     return guess;
@@ -77,7 +76,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if(isContinued=='Y'||isContinued=='y') result=true;
+    if(isContinued=="Y"||isContinued=="y") result=true;
     return result;
 }
 
