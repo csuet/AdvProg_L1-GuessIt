@@ -87,7 +87,15 @@ bool checkContinuePlaying(char isContinued) {
         /* code */
         result = true;
         break;
-    
+    case 'y':/* constant-expression */
+        /* code */
+        result = true;
+        break;
+
+    case 'n':/* constant-expression */
+        /* code */
+        result = true;
+        break;
     case 'N': 
         result = false;
         break;
