@@ -94,7 +94,7 @@ bool checkContinuePlaying(char isContinued) {
 
     case 'n':/* constant-expression */
         /* code */
-        result = true;
+        result = false;
         break;
     case 'N': 
         result = false;
