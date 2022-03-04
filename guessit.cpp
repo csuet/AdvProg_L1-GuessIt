@@ -83,7 +83,7 @@ bool checkContinuePlaying(char isContinued) {
     bool result = false;
     switch (isContinued)
     {
-    case 'Y':/* constant-expression */:
+    case 'Y':/* constant-expression */
         /* code */
         result = true;
         break;
@@ -107,7 +107,7 @@ char getPlayerOpinion() {
     char isContinued;
     do
     {
-        cout<<"Do you want to continue playing? <Y/N>:"
+        cout<<"Do you want to continue playing? <Y/N>:";
         cin>>isContinued;
         if (isContinued!='Y' || isContinued!='N')
         {
