@@ -1,115 +1,78 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "guessit.h"
 
-using namespace std;
+int generateRandomNumber(int min=1,int max=100);
+int getPlayerGuess();
+void printAnswer(int guess, int secretNumber,int score );
+void playGuessIt();
+void gameLoop();
 
-
-/***
-    Args:
-        
-    Returns:
-        number (int) : random number in range 1-100
-***/
-int generateRandomNumber() {
-    // TODO: Return the random number in range 1 to 100
-    return 100;
+int main()
+{
+    std::string yourAnswer;
+    std::cout<<"Do you want to play?   (yes/no)";
+    std::cin>>yourAnswer;
+    if (yourAnswer=="yes") playGuessIt();
 }
 
+void playGuessIt()
+{
+    int secretNumber=generateRandomNumber();
+    int guess;
+    int numGuess=0;
+    int score=100;
+    while (guess!=secretNumber)
+    {
+        guess=getPlayerGuess();
+        printAnswer(guess,secretNumber,score);
+        score=score-1;
+        numGuess++;
 
-/***
-    Args:
-        
-    Returns:
-        number (int) : the number that player guessed
-***/
-int getPlayerGuess() {
-    // TODO: Ask the player guest and return the player's number
-
-    return 1;
+    }
 }
 
-
-/***
-    Args:
-        number (int): answer number from player
-        randomNumber (int): the true number
-    Returns:
-        answer (string) : answer of computer after checking result
-***/
-string getAnswer(int number, int randomNumber) {
-    /*** 
-        TODO: check number with randomNumber and return the result.
-              If number is higher than randomNumber, the answer is "Your number is higher."
-              If number is lower than randomNumber, the answer is "Your number is lower."
-              If number is equal randomNumber, the answer is "Congratulation! You win."
-    ***/
-    string answer;
-
-    return answer;
+int generateRandomNumber(int min,int max)
+{
+    srand(time(NULL));
+    return rand() %(max-min+1)+min;
 }
 
-
-/***
-    Args:
-        answer (string): answer from computer after compare numbers
-    Returns:
-        result (bool) : player win or not
-***/
-bool checkSuccess(string answer) {
-    // TODO: return the result after checking that player guessed right or wrong
-    
-    return true;
+int getPlayerGuess()
+{
+    int guess;
+    std::cout<<"Enter your guess: (in range 1--100)";
+    std::cin>>guess;
+    return guess;
 }
 
-
-/***
-    Args:
-        isContinued (char): player's choice
-    Returns:
-        result (bool) : continue playing or not
-***/
-bool checkContinuePlaying(char isContinued) {
-    // TODO: return result after checking player continue playing or not
-    bool result = false;
-
-    return result;
+void printAnswer(int guess,int secretNumber,int score)
+{
+    if (guess==secretNumber)
+    {
+        std::cout<<"Congraduation!"<<std::endl;
+        std::cout<<" Your score is: "<<score<<std::endl;
+        std::cout<<std::endl;
+        gameLoop();
+    }
+    else
+    if (guess<secretNumber)
+    {
+        std::cout<<"Your number is too small "<<std::endl;
+        std::cout<<"Your score is: "<<score-1<<std::endl;
+    }
+    else
+    {
+        std::cout<<"Your number is too big "<<std::endl;
+        std::cout<<"Your score is: "<<score-1<<std::endl;
+    }
 }
 
-
-/***
-    Args:
-        
-    Returns:
-        isContinues (char) : player's choice (continue playing or not)
-***/
-char getPlayerOpinion() {
-    // TODO: Ask the player about continue playing and return the player's choice
-    char isContinued;
-
-    return isContinued;
+void gameLoop()
+{
+    std::string yourAnswer;
+    std::cout<<"Do you want to play again?   (yes/no)";
+    std::cin>>yourAnswer;
+    if (yourAnswer=="yes") playGuessIt();
 }
 
-
-void playGuessIt() {
-    int randomNumber = generateRandomNumber();
-    int number;
-    string answer;
-    
-    do {
-        number = getPlayerGuess();
-        answer = getAnswer(number, randomNumber);
-        cout << answer << endl;
-    } while (!checkSuccess(answer));
-}
-
-int run() {
-    srand(time(0));
-    char isContinued;
-    do {
-        playGuessIt();
-        isContinued = getPlayerOpinion();
-    } while (checkContinuePlaying(isContinued));
-    return 0;
-}
