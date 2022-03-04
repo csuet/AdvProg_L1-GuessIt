@@ -87,15 +87,14 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
-    // bool result = false;
-    // if(isContinued=='y'){
-    //     result = true;
-    // }
-    // else{
-    //     result = false;
-    // }
-    // return result;
-    return true;
+    bool result = false;
+    if(isContinued=='y'){
+        result = true;
+    }
+    else if(isContinued=='n'){
+        result = false;
+    }
+    return result;
 }
 
 
