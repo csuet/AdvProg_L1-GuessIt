@@ -71,8 +71,10 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    if(answer[0] == 'C') return true;
-    return false;
+    if(answer == "Congratulation! You win.") 
+        return true;
+    else 
+        return false;
 }
 
 
@@ -85,7 +87,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if(isContinued == 'Y') result = true;
+    if(isContinued == 'Y' ||isContinued == 'y') result = true;
     return result;
 }
 
@@ -99,7 +101,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cout<< "Enter Y if want to play more, else enter N" <<endl;
+    cout<< "Enter Y if want to play more, else enter N " ;
     cin>> isContinued;
     return isContinued;
 }
