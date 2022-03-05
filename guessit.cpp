@@ -54,7 +54,7 @@ string getAnswer(int number, int randomNumber) {
     }
     else if (number < randomNumber)
     {
-        answer = "Yout nuber is lower.";
+        answer = "Yout number is lower.";
     }
     else
     {
