@@ -93,10 +93,13 @@ bool checkContinuePlaying(char isContinued) {
     bool result = false;
     if(isContinued = 'y')
     {
-        result = true;
+        return true;
     }
     else
-    return result;
+    {
+        return result;
+    }
+
 }
 
 
