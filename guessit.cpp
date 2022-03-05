@@ -94,7 +94,7 @@ char getPlayerOpinion() {
     char isContinued;
     do
     {
-        cin >> isContinued
+        cin >> isContinued;
     } while (isContinued != 'y' && isContinued != 'n');
     
     return isContinued;
