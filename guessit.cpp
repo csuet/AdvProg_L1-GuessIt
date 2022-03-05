@@ -27,7 +27,6 @@ int generateRandomNumber() {
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
     int number;
-    cout << endl << "Your guess number: ";
     cin >> number;
     return number;
 }
@@ -48,9 +47,9 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-    if (number > randomNumber) cout << "Your number is higher." << endl;
-    else if (number < randomNumber) cout << "Your number is lower." << endl;
-    else cout << "Congratulation! You win." << endl;
+    if (number > randomNumber) answer = "Your number is higher.";
+    else if (number < randomNumber) answer = "Your number is lower.";
+    else answer = "Congratulation! You win.";
     return answer;
 }
 
