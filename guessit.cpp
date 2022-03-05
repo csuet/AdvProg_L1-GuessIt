@@ -26,7 +26,6 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-
     int number;
     cin >> number;
     return number;
@@ -49,8 +48,7 @@ string getAnswer(int number, int randomNumber) {
     ***/
     if (number > randomNumber) return "Your number is higher.";
     if (number < randomNumber) return "Your number is lower.";
-    if (number == randomNumber) return  "Congratulation! You win.";
-        
+    if (number == randomNumber) return  "Congratulation! You win."; 
 }
 
 
