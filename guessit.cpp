@@ -13,7 +13,7 @@ using namespace std;
         number (int) : random number in range 1-100
 ***/
 int generateRandomNumber() {
-    int number = rand() % 100 + 1;
+    int number = 1 + rand() % 100 ;
     return number;
 }
 
@@ -49,7 +49,7 @@ string getAnswer(int number, int randomNumber) {
     string answer;
     if (number > randomNumber) answer = "Your number is higher.";
     else if (number < randomNumber) answer = "Your number is lower.";
-    else if (number == randomNumber) answer = "Congratulatin! You win.";
+    else if (number == randomNumber) answer = "Congratulation! You win.";
     return answer;
 }
 
@@ -63,7 +63,7 @@ string getAnswer(int number, int randomNumber) {
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
     bool result = false;
-    if (answer == "Congratulatin! You win.") result = true;
+    if (answer == "Congratulation! You win.") result = true;
     return result;
 }
 
