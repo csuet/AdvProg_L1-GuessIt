@@ -77,8 +77,8 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
-    bool result = false;
-    if(isContinued == 'continue') result = true;
+    bool result = true;
+    cout << isContinued;
     return result;
 }
 
