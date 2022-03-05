@@ -91,7 +91,7 @@ bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
 
     bool result = false;
-    if(isContinued = 'y' || isContunued == 'Y')
+    if(isContinued = 'y' || isContinued == 'Y')
     {
         return true;
     }
