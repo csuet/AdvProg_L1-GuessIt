@@ -65,9 +65,14 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    if(answer=="Congratulation! You win.")
+    if(answer == "Your number is higher." || answer == "Your number is lower." )
+    {
+        return false;
+    }
+    else if(answer == "Congratulation! You win.")
+    {
         return true;
-    return false;
+    }
 }
 
 
@@ -125,7 +130,7 @@ void playGuessIt() {
     } while (!checkSuccess(answer));
 }
 
-int main() {//run
+int run() {//run
     srand(time(0));
     char isContinued;
     do {
