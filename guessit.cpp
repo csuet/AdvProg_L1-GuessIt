@@ -14,7 +14,7 @@ using namespace std;
 ***/
 int generateRandomNumber() {
 
-    return rand() % 99 +1;
+    return rand() % 100 +1;
 }
 
 
