@@ -63,7 +63,7 @@ string getAnswer(int number, int randomNumber) {
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
 
-    if(answer = "Congratulation! You win.") return true;
+    if(answer == "Congratulation! You win.") return true;
     return false;
 }
 
@@ -77,7 +77,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if(isContinued = 'y') result = true;
+    if(isContinued == 'y') result = true;
     return result;
 }
 
