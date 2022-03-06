@@ -14,9 +14,7 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    int ran = 0;
-    while(ran == 0) ran = rand() % 101;
-    return ran;
+    return rand()%(100)+1;
 }
 
 
