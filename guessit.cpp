@@ -1,115 +1,67 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include "guessit.h"
-
+#include<iostream>
+#include<cstdlib>
 using namespace std;
 
-
-/***
-    Args:
-        
-    Returns:
-        number (int) : random number in range 1-100
-***/
-int generateRandomNumber() {
-    // TODO: Return the random number in range 1 to 100
-    return 100;
+int RandomNumber(){
+    int randomnum= rand()%100 + 1;
+    return randomnum;
+   //return 45;
 }
+void GetPlayerName(){
+    string s;
+    cout<<"What is your name? ";
+    cin>>s;
+    cout<<"Hello "<<s<<endl;
+    cout<<"Wellcome to GuessIt game. "<<endl;
 
-
-/***
-    Args:
-        
-    Returns:
-        number (int) : the number that player guessed
-***/
-int getPlayerGuess() {
-    // TODO: Ask the player guest and return the player's number
-
-    return 1;
 }
-
-
-/***
-    Args:
-        number (int): answer number from player
-        randomNumber (int): the true number
-    Returns:
-        answer (string) : answer of computer after checking result
-***/
-string getAnswer(int number, int randomNumber) {
-    /*** 
-        TODO: check number with randomNumber and return the result.
-              If number is higher than randomNumber, the answer is "Your number is higher."
-              If number is lower than randomNumber, the answer is "Your number is lower."
-              If number is equal randomNumber, the answer is "Congratulation! You win."
-    ***/
-    string answer;
-
-    return answer;
+int Playerguess(){
+    int n;
+    cout<<"Enter your number:";
+    cin>>n;
+    return n;
 }
+void print(int guess,int secertNumber){
+    if(guess==secertNumber){
 
-
-/***
-    Args:
-        answer (string): answer from computer after compare numbers
-    Returns:
-        result (bool) : player win or not
-***/
-bool checkSuccess(string answer) {
-    // TODO: return the result after checking that player guessed right or wrong
-    
-    return true;
+    }
+    else if(guess<secertNumber){
+        cout<<"Your number is too small,try again!"<<endl;
+    }
+    else if(guess>secertNumber){
+        cout<<"Your number is too big,try again!"<<endl;
+    }
 }
+void playerguessit(){
+    int guess;
+    int secertNumber=RandomNumber();
+    int count=0;
+    do{
+        count++;
+        guess=Playerguess();
+        print(guess,secertNumber);
+    }while(guess!=secertNumber);
+    if(count>8){
+        cout<<"You lose!"<<endl;
+    }
+    else{
+        cout<<"Congratulation,You win"<<endl;
+    }
 
-
-/***
-    Args:
-        isContinued (char): player's choice
-    Returns:
-        result (bool) : continue playing or not
-***/
-bool checkContinuePlaying(char isContinued) {
-    // TODO: return result after checking player continue playing or not
-    bool result = false;
-
-    return result;
 }
-
-
-/***
-    Args:
-        
-    Returns:
-        isContinues (char) : player's choice (continue playing or not)
-***/
-char getPlayerOpinion() {
-    // TODO: Ask the player about continue playing and return the player's choice
-    char isContinued;
-
-    return isContinued;
-}
-
-
-void playGuessIt() {
-    int randomNumber = generateRandomNumber();
-    int number;
-    string answer;
-    
+void PlayAgain(){
+    char continued;
     do {
-        number = getPlayerGuess();
-        answer = getAnswer(number, randomNumber);
-        cout << answer << endl;
-    } while (!checkSuccess(answer));
+        playerguessit();
+        cout<<endl<<"Do you want to play again(y/n) ?: ";
+        cin>>continued;
+
+    }while(continued=='y'||continued=='Y');
 }
 
-int run() {
+int main(){
     srand(time(0));
-    char isContinued;
-    do {
-        playGuessIt();
-        isContinued = getPlayerOpinion();
-    } while (checkContinuePlaying(isContinued));
+    GetPlayerName();
+    PlayAgain();
     return 0;
 }
