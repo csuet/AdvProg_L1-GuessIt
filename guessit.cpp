@@ -79,7 +79,7 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
-    if(isContinued==1) return 1;
+    if(isContinued=='Y') return 1;
     else return 0;
 
   
@@ -97,8 +97,8 @@ char getPlayerOpinion() {
     char isContinued;
     cout<<"ban muon choi tiep khong? Y/N";
     cin >> isContinued;
-    if(isContinued=='Y') return 1;
-    else return 0;
+    if(isContinued=='Y') return 'Y';
+    else return 'N';
 }
 
 
@@ -114,7 +114,7 @@ void playGuessIt() {
     } while (!checkSuccess(answer));
 }
 
-int main() {
+int run() {
     srand(time(0));
     char isContinued;
     do {
