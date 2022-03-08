@@ -62,8 +62,9 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    if(answer == "Congratulation! You win.") return true;
-    return false;
+    if(answer == "Congratulation! You win.") 
+    return true;
+
 }
 
 
