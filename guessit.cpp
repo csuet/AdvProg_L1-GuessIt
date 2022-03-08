@@ -108,7 +108,7 @@ void playGuessIt() {
 }
 
 int run() {
-    srand(time(nullptr));
+    srand(time(0));
     char isContinued;
     do {
         playGuessIt();
