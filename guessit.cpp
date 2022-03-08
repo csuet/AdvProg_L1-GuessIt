@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "guessit.h"
+
 
 using namespace std;
 
@@ -92,8 +92,6 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cout<<"Do you want to play again ?";
-    cin>>isContinued;
     switch(isContinued){
         case 'n':{
             cout<< "No";
