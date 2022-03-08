@@ -14,7 +14,7 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    return 100;
+    return rand() % 100 +1;
 }
 
 
@@ -26,8 +26,10 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-
-    return 1;
+    int number;
+    cout << endl << "Enter your number between 1 and 100: ";
+    cin >> number;
+    return number;
 }
 
 
@@ -46,21 +48,22 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-
+    if(number > randomNumber) answer = "Your number is higher";
+    else if (number < randomNumber) answer = "Your number is lower";
+    else answer = "Congratulation! You win.";
     return answer;
 }
 
 
-/***
-    Args:
+/***    Args:
         answer (string): answer from computer after compare numbers
     Returns:
         result (bool) : player win or not
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    
-    return true;
+    if(answer == "Congratulation! You win.") return true;
+    return false;
 }
 
 
@@ -73,6 +76,8 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
+    if(isContinued == 'n') result = true;
+    if(isContinued == 'y') result = false;
 
     return result;
 }
@@ -87,7 +92,19 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
+    cin >> isContinued;
+    cout<<"Do you want to play again ?";
+    switch(isContinued){
+        case 'n':{
+            cout<< "No";
+            break;
+        }
+        case 'y':{
+            cout<< "Yes";
+            break;
+        }
 
+    }
     return isContinued;
 }
 
