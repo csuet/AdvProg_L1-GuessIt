@@ -92,6 +92,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
+    cin>> isContinued;
     switch(isContinued){
         case 'n':{
             cout<< "No";
