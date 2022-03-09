@@ -97,7 +97,7 @@ char getPlayerOpinion() {
     char isContinued;
     cout<<"ban muon choi tiep khong? Y/N";
     cin >> isContinued;
-    if(isContinued=='Y'|| isContinued=='y) return isContinued;
+    if(isContinued=='Y'|| isContinued=='y') return isContinued;
     else return 'N';
 }
 
