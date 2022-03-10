@@ -49,7 +49,7 @@ string getAnswer(int number, int randomNumber)
     ***/
     string answer;
     if (number > randomNumber)
-        answer = "Your number id higher.";
+        answer = "Your number is higher.";
     else
     {
         if (number < randomNumber)
