@@ -56,11 +56,11 @@ string getAnswer(int number, int randomNumber) {
     }
     else if (number < randomNumber)
     {
-        getAnswer = "Your number is too small.";
+        getAnswer = "Your number is lower.";
     }
     else 
     {
-        getAnswer = "Your number is too big.";
+        getAnswer = "Your number is higher.";
     }
     return getAnswer; 
 }
