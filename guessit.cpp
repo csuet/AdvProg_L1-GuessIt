@@ -14,7 +14,6 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    srand(time(NULL));
     return rand() % 100 + 1;
 }
 
@@ -100,7 +99,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cout << "Do you want to continue playing? (y/n) ";
+    //cout << "Do you want to continue playing? (y/n) ";
     cin >> isContinued;
     return isContinued;
 }
@@ -119,7 +118,7 @@ void playGuessIt() {
 }
 
 int run() {
-    srand(time(0));
+    srand(time(NULL));
     char isContinued;
     do {
         playGuessIt();
