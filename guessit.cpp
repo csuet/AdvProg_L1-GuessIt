@@ -12,6 +12,7 @@ using namespace std;
     Returns:
         number (int) : random number in range 1-100
 ***/
+int generateRandomNumber() {
     int randomIndex = rand() % 100;// TODO: Return the random number in range 1 to 100
     return randomIndex;
 }
