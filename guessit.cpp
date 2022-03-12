@@ -52,7 +52,7 @@ string getAnswer(int number, int randomNumber) {
         answer = "Your number is higher.";
     }
     else {
-        answer = (number==randomNumber)? "Congratulation You win.": "Your number is lower.";
+        answer = (number==randomNumber)? "Congratulation! You win.": "Your number is lower.";
     }
     return answer;
 }
