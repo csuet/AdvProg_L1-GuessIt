@@ -8,19 +8,19 @@ using namespace std;
 
 /***
     Args:
-        
+
     Returns:
         number (int) : random number in range 1-100
 ***/
 int generateRandomNumber() {
-    
+
     return rand()%100+1;
 }
 
 
 /***
     Args:
-        
+
     Returns:
         number (int) : the number that player guessed
 ***/
@@ -40,7 +40,7 @@ int getPlayerGuess() {
         answer (string) : answer of computer after checking result
 ***/
 string getAnswer(int number, int randomNumber) {
-    /*** 
+    /***
         TODO: check number with randomNumber and return the result.
               If number is higher than randomNumber, the answer is "Your number is higher."
               If number is lower than randomNumber, the answer is "Your number is lower."
@@ -77,7 +77,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-	if(isContinued=="1"){
+	if(isContinued=="y"){
 		result=true;
 	}
     return result;
@@ -86,7 +86,7 @@ bool checkContinuePlaying(char isContinued) {
 
 /***
     Args:
-        
+
     Returns:
         isContinues (char) : player's choice (continue playing or not)
 ***/
@@ -102,7 +102,7 @@ void playGuessIt() {
     int randomNumber = generateRandomNumber();
     int number;
     string answer;
-    
+
     do {
         number = getPlayerGuess();
         answer = getAnswer(number, randomNumber);
