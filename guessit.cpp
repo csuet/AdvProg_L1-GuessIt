@@ -89,12 +89,12 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    do
+    do 
     {
         cin >> isContinued;
         isContinued = tolower(isContinued);
-    } while (isContinued != 'y' && isContinued != 'n');
-    
+    } while((isContinued != 'y' && isContinued != 'n'));
+
     return isContinued;
 }
 
