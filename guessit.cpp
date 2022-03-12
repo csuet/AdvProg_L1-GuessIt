@@ -13,8 +13,10 @@ using namespace std;
         number (int) : random number in range 1-100
 ***/
 int generateRandomNumber() {
-    int randomIndex = rand() % 100;// TODO: Return the random number in range 1 to 100
-    return randomIndex;
+    // TODO: Return the random number in range 1 to 100
+    srand(time(NULL));
+    int randomNumber = rand() % 100 + 1;
+    return randomNumber;
 }
 
 
@@ -27,10 +29,9 @@ int generateRandomNumber() {
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
 
-    cout << 'Your guess: ' << endl;
-    int x;
-    cin >> x;
-    return x;
+    int guess;
+    cin >> guess;
+    return guess;
 }
 
 
@@ -67,7 +68,7 @@ string getAnswer(int number, int randomNumber) {
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
     bool check;
-    if (answer == 'Congratulation! You win.'){
+    if (answer == "Congratulation! You win."){
         check = true;
     } else {
         check = false;
@@ -101,7 +102,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cout << 'Type Y or y for continued' << endl;
+    cout << "Type Y or y for continued" << endl;
     cin >> isContinued;
     return isContinued;
 }
