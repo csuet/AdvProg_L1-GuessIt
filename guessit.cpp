@@ -15,7 +15,9 @@ using namespace std;
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
     return 100;
-    return rand() % 100 + 1;
+    int randomNumber;
+    randomNumber = rand() % 100;
+    return randomNumber;
 }
 
 
@@ -28,13 +30,11 @@ int generateRandomNumber() {
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
 
-    return 1;
-    int guess;
-    cin >> guess;
-    return guess;
+   cout << "Your guess is: ";
+	int PlayerGuess;
+	cin >> PlayerGuess;
+    return PlayerGuess;
 }
-
-
 /***
     Args:
         number (int): answer number from player
@@ -49,14 +49,11 @@ string getAnswer(int number, int randomNumber) {
               If number is lower than randomNumber, the answer is "Your number is lower."
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
-    string answer;
-
+     string answer;
+	if (number > randomNumber) answer = "Your number is higher.";
+	else if (number < randomNumber) answer = "Your number is lower.";
+	else answer = "Congratulation! You win.";
     return answer;
-        if (number > randomNumber)
-        return "Your number is higher.";
-    if (number < randomNumber)
-        return "Your number is lower.";
-    return "Congratulation! You win.";
 }
 
 
@@ -69,10 +66,8 @@ string getAnswer(int number, int randomNumber) {
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
     
-    return true;
-    if (answer == "Congratulation! You win.")
-        return true;
-    return false;
+   if (answer == "Congratulation! You win.") return true;
+    else return false;
 }
 
 
@@ -84,9 +79,9 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
-    bool result = false;
-    if (isContinued == 'y' || isContinued == 'Y')
-        result = true;
+   bool result = false;
+	if (isContinued == 'Y') result = true;
+	if (isContinued == 'Y' || isContinued == 'y') result = true;
     return result;
 }
 
