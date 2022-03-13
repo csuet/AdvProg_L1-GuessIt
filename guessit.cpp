@@ -14,7 +14,9 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    return 100;
+    int randomNumber;
+    randomNumber = rand() % 100;
+    return randomNumber;
 }
 
 
@@ -26,6 +28,7 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
+    cout << "Your guess is: ";
 	int PlayerGuess;
 	cin >> PlayerGuess;
     return PlayerGuess;
@@ -76,7 +79,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-	if (isContinued == 'Y') result = true;
+	if (isContinued == 'Y' || isContinued == 'y') result = true;
     return result;
 }
 
