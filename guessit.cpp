@@ -13,8 +13,9 @@ using namespace std;
         number (int) : random number in range 1-100
 ***/
 int generateRandomNumber() {
-    // TODO: Return the random number in range 1 to 100
-    return 100;
+    //srand(time(0));
+    int randomNumber=rand()%100+1;
+    return randomNumber;
 }
 
 
@@ -24,10 +25,13 @@ int generateRandomNumber() {
     Returns:
         number (int) : the number that player guessed
 ***/
+ int guessedNumber;
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-
-    return 1;
+    cout<<"Guess a number :";
+   
+    cin>>guessedNumber;
+    return guessedNumber;
 }
 
 
@@ -46,7 +50,9 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-
+    if (number > randomNumber) answer = "Your number is higher.";
+        else if (number < randomNumber) answer = "Your number is lower.";
+            else answer = "Congratulation! You win.";
     return answer;
 }
 
@@ -59,8 +65,7 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    
-    return true;
+    if (answer == "Congratulation! You win.")  return true;else return false;
 }
 
 
@@ -73,7 +78,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-
+    if (isContinued == 'y' or isContinued == 'Y') result = true;
     return result;
 }
 
@@ -87,7 +92,8 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-
+    cout<<"Do you want to play again (y/n) :";
+    cin>>isContinued;
     return isContinued;
 }
 
