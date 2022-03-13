@@ -13,8 +13,9 @@ using namespace std;
         number (int) : random number in range 1-100
 ***/
 int generateRandomNumber() {
-    // TODO: Return the random number in range 1 to 100
-    return rand() % 100 + 1;
+    // TODO: Return the random number in range 1 to 
+    int randomNumber = rand() % 100 + 1;
+    return randomNumber;
 }
 
 
