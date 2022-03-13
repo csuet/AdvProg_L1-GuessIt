@@ -22,7 +22,7 @@ bool askifcontinue(){int x;
 	if(x==1) return true;
 	else return false;
 }
-int main(){
+int run(){
 	bool Playagain;
 	do{
 		Playonegame();
