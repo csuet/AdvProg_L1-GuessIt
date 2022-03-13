@@ -28,7 +28,6 @@ int getPlayerGuess() {
     cout << "Enter your guess (1...100): ";
     cin >> guess;
     return guess;
-    return 1;
 }
 
 
@@ -47,10 +46,10 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-    if (guess == secretNumber) {
+    if (number == randomNumber) {
         answer = "Congratulation! You win.";
     }
-    else if (guess > secretNumber) {
+    else if (number > randomNumber) {
         answer = "Your number is higher.";
     }
     else {
