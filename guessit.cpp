@@ -15,7 +15,7 @@ int generateRandomNumber()
 {
     // TODO: Return the random number in range 1 to 100
     int iRandomNumber;
-    srand(time(NULL));
+    // srand(time(NULL));
     iRandomNumber = rand() % 100 + 1;
     return iRandomNumber;
 }
@@ -30,7 +30,7 @@ int getPlayerGuess()
 {
     // TODO: Ask the player guest and return the player's number
     int guess;
-    std::cout << "Enter your guess: ";
+    // std::cout << "Enter your guess: ";
     std::cin >> guess;
     return guess;
 }
@@ -52,11 +52,11 @@ string getAnswer(int number, int randomNumber)
     ***/
     string answer;
     if (number > randomNumber)
-        std ::cout << "Your number is higher." << std::endl;
+        answer = "Your number is higher.";
     else if (number < randomNumber)
-        std::cout << "Your number is lower." << std::endl;
+        answer = "Your number is lower.";
     else if (number == randomNumber)
-        std::cout << "Congratulation! You win." << std::endl;
+        answer = "Congratulation! You win.";
     return answer;
 }
 
@@ -84,7 +84,8 @@ bool checkContinuePlaying(char isContinued)
 {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if(isContinued == 'y' || isContinued == 'Y') result = true;
+    if (isContinued == 'y' || isContinued == 'Y')
+        result = true;
     return result;
 }
 
@@ -98,7 +99,7 @@ char getPlayerOpinion()
 {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    std:: cin >> isContinued;
+    std::cin >> isContinued;
     return isContinued;
 }
 
