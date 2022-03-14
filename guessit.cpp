@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "guessit.h"
 
 using namespace std;
 
@@ -13,8 +12,10 @@ using namespace std;
         number (int) : random number in range 1-100
 ***/
 int generateRandomNumber() {
-    // TODO: Return the random number in range 1 to 100
-    return 100;
+	srand(time(0));
+    int RandomNumber = rand() % 100 + 1;
+    
+    return RandomNumber;
 }
 
 
@@ -26,8 +27,10 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-
-    return 1;
+	int guess;
+ 	cout << endl << "Enter your guess (1..100): ";
+ 	cin >> guess;
+    return guess;
 }
 
 
@@ -87,7 +90,8 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-
+	cout << "Do you want to play again ?";
+	cin >> isContinued;
     return isContinued;
 }
 
@@ -113,3 +117,25 @@ int run() {
     } while (checkContinuePlaying(isContinued));
     return 0;
 }
+
+
+void printAnswer(int guess, int secretNumber){
+ 	if (guess > secretNumber) {
+ 		cout << "Your number is too big." << endl;
+ 	} else if (guess < secretNumber) {
+ 		cout << "Your number is too small." << endl;
+ 	} else {
+ 		cout << "Congratulation! You win." << endl;
+ 	}
+}
+
+int main(){
+	int secretNumber = generateRandomNumber();
+ 	int guess;
+ 	
+ 	do {
+ 		guess = getPlayerGuess();
+ 		printAnswer(guess, secretNumber);
+ 	} while (guess != secretNumber);
+	
+} 
