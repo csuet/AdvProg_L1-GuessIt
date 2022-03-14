@@ -51,7 +51,7 @@ bool checkSuccess(string answer) {
     return result;
 }
 
-
+}
 bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
@@ -62,7 +62,7 @@ bool checkContinuePlaying(char isContinued) {
     }
     return result;
 }
-
+}
 bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
@@ -72,5 +72,5 @@ char getPlayerOpinion() {
     cin >> isContinued;
     return isContinued;
 }
-
+}
 
