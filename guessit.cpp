@@ -25,10 +25,10 @@ int generateRandomNumber() {
         number (int) : the number that player guessed
 ***/
 int getPlayerGuess() {
-    int number;
-    cout << endl << "Enter your number between 1 and 100: ";
-    cin >> number;
-    return number;
+    int x;
+    cout << endl << "Enter your guess (1..100): ";
+    cin >> x;
+    return x;
 }
 
 
