@@ -109,7 +109,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cout<<"Continue? Y/N?";
+    cout<<"Continue? Y/N?"<<endl;
     cin>>isContinued;
     return isContinued;
 }
@@ -127,7 +127,7 @@ void playGuessIt() {
     } while (!checkSuccess(answer));
 }
 
-int main() {
+int run() {
     srand(time(0));
     char isContinued;
     do {
