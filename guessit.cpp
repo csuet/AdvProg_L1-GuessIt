@@ -91,7 +91,8 @@ bool checkContinuePlaying(char isContinued)
     {
         return true;
     }
-    return false;
+    else
+        return false;
 }
 
 /***
