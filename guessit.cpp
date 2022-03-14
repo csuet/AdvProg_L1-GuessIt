@@ -1,4 +1,5 @@
-@@ -14,7 +14,7 @@ using namespace std;
+#include<bits/stdc++.h>
+using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
@@ -7,7 +8,7 @@ int generateRandomNumber() {
 }
 
 
-@@ -26,8 +26,10 @@ int generateRandomNumber() {
+int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
@@ -20,7 +21,7 @@ int getPlayerGuess() {
 }
 
 
-@@ -46,6 +48,11 @@ string getAnswer(int number, int randomNumber) {
+string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
@@ -32,7 +33,7 @@ int getPlayerGuess() {
 
     return answer;
 }
-@@ -59,8 +66,8 @@ string getAnswer(int number, int randomNumber) {
+string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
@@ -43,7 +44,7 @@ bool checkSuccess(string answer) {
 }
 
 
-@@ -73,7 +80,11 @@ bool checkSuccess(string answer) {
+bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
@@ -56,7 +57,7 @@ bool checkContinuePlaying(char isContinued) {
     return result;
 }
 
-@@ -87,7 +98,8 @@ bool checkContinuePlaying(char isContinued) {
+bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
