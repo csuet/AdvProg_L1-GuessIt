@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "guessit_github.h"
+#include "guessit.h"
 
 using namespace std;
 
