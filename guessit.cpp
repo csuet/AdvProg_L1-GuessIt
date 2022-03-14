@@ -1,5 +1,5 @@
 
-Nguyễn Huy Thái
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
