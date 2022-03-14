@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "guessit.h"
 
 using namespace std;
 
@@ -25,9 +26,9 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-    int guess;
-    cin >> guess;
-    return guess;
+    int number;
+    cin >> number;
+    return number;
 }
 
 
@@ -48,7 +49,7 @@ string getAnswer(int number, int randomNumber) {
     string answer;
     if (number < randomNumber) answer = "Your number is lower.";
     if (number > randomNumber) answer = "Your number is higher.";
-    else answer =  "Congratulation! You win.";
+    if ( number == randomNumber ) answer = "Congratulation! You win.";
 
     return answer;
 }
@@ -76,9 +77,7 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
-    bool result = false;
-    if ( tolower(isContinued) == 'y')
-    result=true;
+   bool result = (tolower(isContinued) == 'y');
     return result;
 }
 
@@ -92,8 +91,9 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cin >> isContinued;	
-	return isContinued;	
+    cout << "Do you want to continue playing? (y/n) ";
+    cin >> isContinued;
+    return isContinued;
 }
 
 
