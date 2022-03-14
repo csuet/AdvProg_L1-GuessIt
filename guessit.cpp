@@ -11,12 +11,10 @@ using namespace std;
     Returns:
         number (int) : random number in range 1-100
 ***/
-int generateRandomNumber()
-{
-    srand(time(NULL));
-    return rand() % (100 - 1 + 1) + 1;
-}
 
+int generateRandomNumber(){
+    return rand() % 100 + 1;
+}
 /***
     Args:
 
