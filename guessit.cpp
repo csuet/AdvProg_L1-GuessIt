@@ -49,9 +49,9 @@ string getAnswer(int number, int randomNumber) {
     ***/
     string answer;
     if (number < randomNumber) {
-        answer = "Your number is too small.";
+        answer = "Your number is lower.";
     } else if (number > randomNumber) {
-        answer = "Your number is too big.";
+        answer = "Your number is higher.";
     } else {
         answer = "Congratulation! You win.";
     }
@@ -67,7 +67,7 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    if (answer =="Congratulation! You win.") {
+    if (answer == "Congratulation! You win.") {
         return true;
     } else {
         return false;
@@ -83,7 +83,7 @@ bool checkSuccess(string answer) {
 ***/
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
-    if (isContinued == 'y') {
+    if (isContinued == 'y' || isContinued == 'Y') {
         return true;
     } else return false;
 }
