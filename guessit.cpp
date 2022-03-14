@@ -13,10 +13,8 @@ using namespace std;
 ***/
 int generateRandomNumber()
 {
-    const int left = 0;
-    const int right = 100;
     srand(time(NULL));
-    return rand() % (right - left + 1) + left;
+    return rand() % (100 - 1 + 1) + 1;
 }
 
 /***
