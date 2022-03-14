@@ -92,7 +92,7 @@ char getPlayerOpinion() {
     do 
     {
         cin >> isContinued;
-        if(isContinued == 'Y' || isContinued == 'N')isContinued -= 32;
+        if(isContinued == 'Y' || isContinued == 'N')isContinued += 32;
     } while((isContinued != 'y' && isContinued != 'n'));
 
     return isContinued;
