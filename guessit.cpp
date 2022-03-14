@@ -14,7 +14,7 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    //srand(static_cast<unsigned int>(time(0)));
+    srand(static_cast<unsigned int>(time(0)));
     return (rand() % 100 + 1);
 }
 
