@@ -36,8 +36,8 @@ int getPlayerGuess() {
     ***/
     string answer;
     if (number > randomNumber) answer = "Your number is higher.";
-    else if (number < randomNumber) answer = "Your number is lower.";
-    else answer = "Congratulation! You win.";
+   	 else if (number < randomNumber) answer = "Your number is lower.";
+    		else answer = "Congratulation! You win.";
 
     return answer;
 }
@@ -48,6 +48,7 @@ bool checkSuccess(string answer) {
 
     return true;
     if (answer == "Congratulation! You win.") return true;
+return false;
 }
 
 
