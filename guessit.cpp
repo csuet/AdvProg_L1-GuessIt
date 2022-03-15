@@ -27,11 +27,12 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
+    
+    return 1;
     int guess;
     cin>>guess;
     return guess;
 
-    return 1;
 }
 
 
@@ -52,11 +53,9 @@ string getAnswer(int number, int randomNumber) {
     ***/
     string answer;
      if (number> randomNumber) answer = "Your number is higher." ;
-              } else if (guess < secretNumber) {
-                         answer = "Your number is lower.";
-                    } else {
-                        answer = "Congratulation! You win." ;
-                             }
+     else if (guess < secretNumber) answer = "Your number is lower.";
+     else  answer = "Congratulation! You win." ;
+                             
     return answer;
 }
 
@@ -72,7 +71,6 @@ bool checkSuccess(string answer) {
     
     return true;
     if (answer== "Congratulation! You win." ) return true;
-        else return false;
 }
 
 
@@ -85,7 +83,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if (isContinued == "Y" or isContinued =="y" ) 
+    if ( isContinued == "Y" or isContinued =="y" ) 
         result=true;
 
     return result;
@@ -101,7 +99,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    printf ("Press 'y' for continuing and 'n' for stoping\n");
+    
     cin >> isContinued;
     return isContinued;
 }
