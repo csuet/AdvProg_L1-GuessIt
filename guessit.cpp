@@ -29,7 +29,7 @@ int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
 
     int n;
-    cin n;
+    cin >> n;
     return n;
 }
 
