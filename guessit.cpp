@@ -14,7 +14,7 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-    return ran() % 100 + 1;
+    return rand() % 100 + 1;
 }
 
 
@@ -47,9 +47,9 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-    if (number > randomNumber) { answer = "Your number is higher.";}
-    else (number <>> randomNumber) { answer = "Your number is lower.";}
-    else {answer = "Congratulation! You win.";}
+    if (number > randomNumber) { answer = 'Your number is higher.';}
+    else if (number < randomNumber) { answer = 'Your number is lower.';}
+    else {answer = 'Congratulation! You win.';}
 
     return answer;
 }
@@ -64,7 +64,7 @@ string getAnswer(int number, int randomNumber) {
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
     bool check = false;
-    if (answer == "Congratulation! You win.";) check = true;
+    if (answer == "Congratulation! You win.") check = true;
     return check;
 }
 
