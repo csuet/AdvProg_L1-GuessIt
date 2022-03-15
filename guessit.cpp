@@ -15,92 +15,57 @@ using namespace std;
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
     return 100;
-    return (rand() % 100 + 1);
+    return rand() % 100 + 1;
 }
 
 
-/***
-    Args:
-        
-    Returns:
-        number (int) : the number that player guessed
+@@ -26,8 +26,9 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-    
-    return 1;
-    int guess;
-    cin>>guess;
-    return guess;
 
+    return 1;
+	int x;
+	cin >> x;
+    return x;
 }
 
 
-/***
-    Args:
-        number (int): answer number from player
-        randomNumber (int): the true number
-    Returns:
-        answer (string) : answer of computer after checking result
-***/
-string getAnswer(int number, int randomNumber) {
-    /*** 
-        TODO: check number with randomNumber and return the result.
-              If number is higher than randomNumber, the answer is "Your number is higher."
-              If number is lower than randomNumber, the answer is "Your number is lower."
+@@ -46,6 +47,9 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
-             
     ***/
     string answer;
-     if (number> randomNumber) answer = "Your number is higher." ;
-     else if (guess < secretNumber) answer = "Your number is lower.";
-     else  answer = "Congratulation! You win." ;
-                             
+    if (number > randomNumber) answer = "Your number is higher.";
+    else if (number < randomNumber) answer = "Your number is lower.";
+    else answer = "Congratulation! You win.";
+
     return answer;
 }
-
-
-/***
-    Args:
-        answer (string): answer from computer after compare numbers
-    Returns:
-        result (bool) : player win or not
+@@ -59,8 +63,7 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    
+
     return true;
-    if (answer== "Congratulation! You win." ) return true;
+    if (answer == "Congratulation! You win.") return true;
 }
 
 
-/***
-    Args:
-        isContinued (char): player's choice
-    Returns:
-        result (bool) : continue playing or not
-***/
+@@ -73,7 +76,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if ( isContinued == "Y" or isContinued =="y" ) 
-        result=true;
 
+    if (isContinued == 'y') result == true;
     return result;
 }
 
-
-/***
-    Args:
-        
-    Returns:
-        isContinues (char) : player's choice (continue playing or not)
-***/
+@@ -87,7 +90,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    
-    cin >> isContinued;
+
+	cin >> isContinued;
     return isContinued;
 }
 
