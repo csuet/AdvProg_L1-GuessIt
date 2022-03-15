@@ -41,15 +41,14 @@ bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
 
-    if (isContinued == 'y') result == true;
+    if (isContinued == 'y' || isContinued == 'Y' ) result = true;
     return result;
 }
 
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-
-	cin >> isContinued;
+    cin >> isContinued;
     return isContinued;
 }
 
