@@ -2,10 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "guessit.h"
-
 using namespace std;
-
-
 /***
     Args:
         
@@ -15,6 +12,8 @@ using namespace std;
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
     return 100;
+    srand(time(0));
+    return rand() % 100 + 1;;
 }
 
 
@@ -28,6 +27,10 @@ int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
 
     return 1;
+    int number;
+    cout << endl << "Enter your number between 1 and 100: ";
+    cin >> number;
+    return number;
 }
 
 
@@ -47,9 +50,15 @@ string getAnswer(int number, int randomNumber) {
     ***/
     string answer;
 
+    if (number > randomNumber) {
+        answer = "Your number is higher." ;
+    } else if (number < randomNumber) {
+        answer= "Your number is lower." ;
+    } else {
+        answer= "Congratulation! You win." ;
+    }
     return answer;
 }
-
 
 /***
     Args:
@@ -59,8 +68,10 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    
+
     return true;
+    if (answer == "Congratulation! You win.") return true;
+    return false;
 }
 
 
@@ -74,9 +85,10 @@ bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
 
+    if (isContinued == 'n' || isContinued == 'N') return false;
+    if (isContinued == 'y' || isContinued == 'Y') return true;
     return result;
 }
-
 
 /***
     Args:
@@ -88,9 +100,10 @@ char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
 
+    cout << "\nDo you want to play again (y/n)? ";
+    cin >> isContinued;
     return isContinued;
 }
-
 
 void playGuessIt() {
     int randomNumber = generateRandomNumber();
@@ -103,7 +116,6 @@ void playGuessIt() {
         cout << answer << endl;
     } while (!checkSuccess(answer));
 }
-
 int run() {
     srand(time(0));
     char isContinued;
