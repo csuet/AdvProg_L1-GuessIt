@@ -9,11 +9,11 @@ using namespace std;
     Returns:
         number (int) : random number in range 1-100
 ***/
-
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
     return 100;
-    return rand() % 100 + 1;
+    srand(time(0));
+    return rand() % 100 + 1;;
 }
 
 
@@ -28,6 +28,7 @@ int getPlayerGuess() {
 
     return 1;
     int number;
+    cout << endl << "Enter your number between 1 and 100: ";
     cin >> number;
     return number;
 }
@@ -47,12 +48,15 @@ string getAnswer(int number, int randomNumber) {
               If number is lower than randomNumber, the answer is "Your number is lower."
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
-
     string answer;
 
-    if (number > randomNumber) answer = "Your number is higher.";
-    else if (number < randomNumber) answer = "Your number is lower.";
-    else answer = "Congratulation! You win.";
+    if (number > randomNumber) {
+        answer = "Your number is higher." ;
+    } else if (number < randomNumber) {
+        answer= "Your number is lower." ;
+    } else {
+        answer= "Congratulation! You win." ;
+    }
     return answer;
 }
 
