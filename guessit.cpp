@@ -4,8 +4,6 @@
 #include "guessit.h"
 
 using namespace std;
-const int MIN = 1;
-const int MAX = 100;
 
 
 /***
@@ -16,8 +14,7 @@ const int MAX = 100;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-
-    return MIN + rand() % (MAX + 1 - MIN);
+    return rand() % 100 + 1;
 }
 
 
@@ -29,10 +26,9 @@ int generateRandomNumber() {
 ***/
 int getPlayerGuess() {
     // TODO: Ask the player guest and return the player's number
-    int input;
-    cout << "The number you guess " << endl;
-    cin >> input;
-    return input;
+	int x;
+	cin >> x;
+    return x;
 }
 
 
@@ -52,8 +48,9 @@ string getAnswer(int number, int randomNumber) {
     ***/
     string answer;
     if (number > randomNumber) answer = "Your number is higher.";
-    if (number < randomNumber) answer = "Your number is lower.";
-    if (number == randomNumber) answer = "Congratulation! You win.";
+    else if (number < randomNumber) answer = "Your number is lower.";
+    else answer = "Congratulation! You win.";
+
     return answer;
 }
 
@@ -66,10 +63,8 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-    
-    if (answer != "Congratulation! You win.")
-        return false;
-    else return true;
+    if (answer == "Congratulation! You win.") return true;
+    return false;
 }
 
 
@@ -82,10 +77,7 @@ bool checkSuccess(string answer) {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if ( isContinued == 'y' || isContinued == 'Y')
-    {
-        result = true;
-    }
+    if (isContinued == 'y' || isContinued == 'Y') result = true;
     return result;
 }
 
@@ -99,10 +91,7 @@ bool checkContinuePlaying(char isContinued) {
 char getPlayerOpinion() {
     // TODO: Ask the player about continue playing and return the player's choice
     char isContinued;
-    cout << "Do you want to play again? Y/N?" << endl;
-    cin >> isContinued;
-   
-
+	cin >> isContinued;
     return isContinued;
 }
 
