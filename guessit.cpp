@@ -104,6 +104,7 @@ char getPlayerOpinion() {
 }
 
 
+
 void playGuessIt() {
     int randomNumber = generateRandomNumber();
     int number;
